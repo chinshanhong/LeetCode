@@ -1,6 +1,7 @@
 public class Solution {
     // you need to treat n as an unsigned value
-    public int hammingWeight(int n) {
+    public int hammingWeight(int n) {\
+        //First solution
         int countOne = 0;
         String s = Integer.toBinaryString(n);
         for(int i = 0; i < s.length(); i++){
@@ -15,3 +16,6 @@ public class Solution {
              return 0;
          else
              return 1 + hammingWeight(n & (n - 1));
+                                     
+        //Most efficient solution
+        return Integer.bitCount(n);
