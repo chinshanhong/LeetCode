@@ -1,0 +1,22 @@
+class Solution {
+    public boolean isMonotonic(int[] nums) {
+        int start = nums[0];
+        int end = nums[nums.length - 1];
+        
+        if(start <= end){
+            for(int i = 0; i < nums.length - 1; i++){
+                if(nums[i] > nums[i + 1] || nums[i + 1] > end){
+                    return false;
+                }
+            }
+        }
+        else if(start >= end){
+            for(int i = 0; i < nums.length - 1; i++){
+                if(nums[i] < nums[i + 1] || nums[i + 1] < end){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+}
