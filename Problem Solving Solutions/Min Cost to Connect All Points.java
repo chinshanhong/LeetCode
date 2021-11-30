@@ -1,4 +1,4 @@
-lass Solution {
+class Solution {
     public int minCostConnectPoints(int[][] points) {
         int[][] edges = new int[points.length][points.length];
         
