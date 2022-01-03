@@ -1,4 +1,5 @@
 class Solution {
+    //A less efficient solution
     public boolean isSameAfterReversals(int num) {
         String input = num + "";
         if(input.length() == 1) return true;
@@ -31,5 +32,14 @@ class Solution {
             }
         }
         return res;
+    }
+    
+    //A more effective solution
+    public boolean isSameAfterReversals(int num) {
+         if(num == 0){
+            return true;
+        }
+        if(num % 10 != 0) return true;
+        else return false;
     }
 }
